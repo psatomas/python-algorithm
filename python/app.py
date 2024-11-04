@@ -1,4 +1,7 @@
-def greetings_function(name):
-    print('Welcome '+name)
+my_dict = {
+    'name':'Tim',
+    'nationality': 'african',
+    'qualification': 'college'
 
-greetings_function('tomás')
+}
+print(my_dict['name'])
