@@ -67,3 +67,60 @@ def do_four(f, value):
 
 # Test do_four
 do_four(print_twice, 'spam')
+
+# 3. Note: This exercise should be done using only the statements and other features we
+# have learned so far.
+# 1. Write a function that draws a grid like the following:
+#"grid not avaible"
+# Hint: to print more than one value on a line, you can print a comma-separated sequence of
+# values:
+# print('+', '-')
+# By default, print advances to the next line, but you can override that behavior and put a
+# space at the end, like this:
+# print('+', end=' ')
+# print('-'
+# The output of these statements is '+ -' on the same line. The output from the next print
+# statement would begin on the next line.
+# 2. Write a function that draws a similar grid with four rows and four columns.
+
+# 1. two rows and two columns
+def print_horizontal():
+    print('+ - - - - + - - - - +')
+
+def print_vertical():
+    print('|         |         |')
+
+def print_grid():
+    print_horizontal()
+    for i in range(4):
+        print_vertical()
+    print_horizontal()
+    for i in range(4):
+        print_vertical()
+    print_horizontal()
+
+print_grid()
+
+# 2. two rows and two columns
+def print_horizontal():
+    print('+ - - - - + - - - - + - - - - + - - - - +')
+
+def print_vertical():
+    print('|         |         |         |         |')
+
+def print_grid():
+    print_horizontal()
+    for i in range(4):
+        print_vertical()
+    print_horizontal()
+    for i in range(4):
+        print_vertical()
+    print_horizontal()
+    for i in range(4):
+        print_vertical()
+    print_horizontal()
+    for i in range(4):
+        print_vertical()
+    print_horizontal()
+
+print_grid()
