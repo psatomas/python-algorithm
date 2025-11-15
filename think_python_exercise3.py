@@ -11,5 +11,59 @@ def right_justify(s):
     leading_spaces = total_width - len(s)
     print(' ' * leading_spaces + s)
 
-# Test the function
 right_justify('monty')
+
+# 2. A function object is a value you can assign to a variable or pass as an argument. For
+# example, do_twice is a function that takes a function object as an argument and calls it twice:
+# def do_twice(f):
+# f()
+# f()
+# Here’s an example that uses do_twice to call a function named print_spam twice.
+# def print_spam():
+# print('spam')
+# do_twice(print_spam)
+# 1. Type this example into a script and test it.
+# 2. Modify do_twice so that it takes two arguments, a function object and a value, and calls the
+# function twice, passing the value as an argument.
+# 3. Copy the definition of print_twice from earlier in this chapter to your script.
+# 4. Use the modified version of do_twice to call print_twice twice, passing 'spam' as an
+# argument.
+# 5. Define a new function called do_four that takes a function object and a value and calls the
+# function four times, passing the value as a parameter. There should be only two statements in
+# the body of this function, not four.
+
+# 1. Original example
+def do_twice(f):
+    f()
+    f()
+
+def print_spam():
+    print('spam')
+
+do_twice(print_spam)
+
+
+# 2. Modified do_twice: now takes a function AND a value
+def do_twice(f, value):
+    f(value)
+    f(value)
+
+
+# 3. print_twice from earlier in the chapter
+def print_twice(text):
+    print(text)
+    print(text)
+
+
+# 4. Use modified do_twice to call print_twice twice
+do_twice(print_twice, 'spam')
+
+
+# 5. Define do_four using only TWO statements inside the function
+def do_four(f, value):
+    do_twice(f, value)
+    do_twice(f, value)
+
+
+# Test do_four
+do_four(print_twice, 'spam')
